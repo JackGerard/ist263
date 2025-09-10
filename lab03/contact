@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=""utf-8>
+        <title>Contact</title>
+    </head>
+    <body>
+        <h1>information</h1>
+        <p>Jack Gerard</p>
+        <p>Address: 900 South Crouse Ave, Syracuse, NY 13244</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" >My profile</a></p>
+        <p><a href= "jgerar01@syr.edu"> Jack Gerard Email</a></p>
+
+    </body>
+</html>
