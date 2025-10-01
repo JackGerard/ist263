@@ -7,6 +7,6 @@ h1, h2 {
     color: green;  
 }
 
-.evenrow {
+tr:nth-child(evenrow){
    box-shadow: blue;
 }
