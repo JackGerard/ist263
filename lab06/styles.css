@@ -7,6 +7,7 @@ h1, h2 {
     color: green;  
 }
 
-tr:nth-child(evenrow) {
-    background-color: gray;
+.evenrow {
+    background-color: lightgreen;
 }
+h1, h2 {font-size: 2em;}
