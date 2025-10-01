@@ -1,0 +1,12 @@
+
+body {
+    font-family: Arial, sans-serif;  
+}
+
+h1, h2 {
+    color: green;  
+}
+
+.evenrow {
+    color:rgba(0, 0, 255, 0.957)
+}
