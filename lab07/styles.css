@@ -7,11 +7,11 @@ body{
 
 a{color:#740001}
 
-a:hover{color: #d3a625}
+a:hover{color: #d3a625;}
 
 h1{color: #ae0001;}
 
-nav{ background-color: #740001;}
-nav a:hover{ color:#ab8b33}
-nav a{ color:#eeba30}
+nav{ background-color: #740001;padding: 10px; margin: 30px;}
+nav a:hover{ color:#eeba30;}
+nav a{ color:#eeba30;}
 
