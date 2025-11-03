@@ -1,0 +1,13 @@
+
+body {
+    font-family: Arial, sans-serif;  
+}
+
+h1, h2 {
+    color: green;  
+}
+
+.evenrow {
+    background-color: lightgreen;
+}
+h1, h2 {font-size: 2em;}
