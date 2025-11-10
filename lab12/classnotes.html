@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+<head>
+        <meta charset= "utf-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title> First Java Program </title>
+       <script>
+        function bigly() {
+            document.getELementbyId('p1').innerHTML = 
+            "new content"
+        }
+        function wrongAnswer() { 
+            document.getELementbyId('wrong').innerHTML = 
+            "<span style='color:red;'> True is the wrong answer answer!</span>"
+        }
+       </script>
+</head>
+    <body>
+        <p id="p1" onclick="bigly()"> content goes here</p>
+        <p id="p2"> paragraph 2</p>
+        <h1>MY JAVA QUIZ</h1>
+        <p id="right">True</p>
+        <p id="wrong" onclick="wrongAnswer"> false</p>
+
+
+
+    </body>
+</html>
