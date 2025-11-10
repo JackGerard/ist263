@@ -20,19 +20,19 @@
             document.getElementById('firstImage').setAttribute("src", "../images/download.jpg");
         }
         function bluey() {
-            document.getElementById('p2').style.color="#0000ff"
+            document.getElementById('p2').style.color="#0000ee"
         }
     </script>
 </head>
 
 <body>
     <p onclick="bigly();" id="p1">content goes here</p>
-    <p id="p2" onclick="bluey();">paragraph 2</p>
+    <p id="p2" onmouseover="bluey();">paragraph 2</p>
 
     <h1>MY JAVA QUIZ</h1>
 
-    <p id="right">True</p>
-    <p onclick="wrongAnswer();" id="wrong">False</p>
+    <p onclick="wrongAnswer();" id="wrong" >True</p>
+    <p id="right" >False</p>
 
     <img src="../images/download-1.jpg" id="firstImage" onclick="changeImage();">
 </body>
