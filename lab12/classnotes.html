@@ -1,30 +1,37 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    
+
 <head>
-        <meta charset= "utf-8">
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        <title> First Java Program </title>
-       <script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First JavaScript Program</title>
+
+    <script>
         function bigly() {
-            document.getELementbyId('p1').innerHTML = 
-            "new content"
+            document.getElementById('p1').innerHTML = "new content";
         }
-        function wrongAnswer() { 
-            document.getELementbyId('wrong').innerHTML = 
-            "<span style='color:red;'> True is the wrong answer answer!</span>"
+
+        function wrongAnswer() {
+            document.getElementById('wrong').innerHTML =
+                "<span style='color:red;'>True is the wrong answer!</span>";
         }
-       </script>
+
+        function changeImage() {
+            document.getElementById('firstImage').src = "../images/new-image.jpg";
+        }
+    </script>
 </head>
-    <body>
-        <p onclick="bigly();" id="p1"> content goes here</p>
-        <p id="p2"> paragraph 2</p>
-        <h1>MY JAVA QUIZ</h1>
-        <p id="right">True</p>
-        <p onclick="wrongAnswer();" id="wrong" > false</p>
 
-<img src="../images/download-1.jpg" id="first image" onclick="changeimage();">
+<body>
+    <p onclick="bigly();" id="p1">content goes here</p>
+    <p id="p2">paragraph 2</p>
 
-    </body>
+    <h1>MY JAVA QUIZ</h1>
+
+    <p id="right">True</p>
+    <p onclick="wrongAnswer();" id="wrong">False</p>
+
+    <img src="../images/download-1.jpg" id="firstImage" onclick="changeImage();">
+</body>
+
 </html>
