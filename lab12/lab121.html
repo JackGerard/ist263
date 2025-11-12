@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lab 12 Slideshow — Complete</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+            background-color: #111111;
+            color: #ffffff;
+        }
+        #slideshow-container {
+            background-color: #000000;
+            width: 1200px;
+            margin: auto; /* centers container */
+            padding: 20px 0;
+        }
+        /* --- Layout with floats (per lab) --- */
+        #bigimages { 
+            float: left; 
+            width: 600px; 
+            margin-right: 40px; 
+        }
+        #bigimages img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+        }
+        #planetinfo { 
+            float: left; 
+            width: 520px; 
+            padding: 20px 0; 
+        }
+        #thumbnails { 
+            clear: both; 
+            width: 840px; 
+            margin: 20px auto 0; 
+            padding-top: 10px;
+            text-align: center;
+        }
+        #thumbnails img { 
+            width: 100px; 
+            margin: 4px; 
+            cursor: pointer; 
+        }
+
+        /* --- Part A: hide all but Mercury on load --- */
+        #venus, #earth, #mars, #jupiter, #saturn, #uranus, #neptune,
+        #venusinfo, #earthinfo, #marsinfo, #jupiterinfo, #saturninfo, #uranusinfo, #neptuneinfo {
+            display: none;
+        }
+    </style>
+    <script>
+        /* Part B/C: JS to toggle slides */
+
+        function PlanetsOff() {
+            const ids = [
+                'mercury','venus','earth','mars','jupiter','saturn','uranus','neptune',
+                'mercuryinfo','venusinfo','earthinfo','marsinfo','jupiterinfo','saturninfo','uranusinfo','neptuneinfo'
+            ];
+            ids.forEach(function(id){
+                var el = document.getElementById(id);
+                if (el) { el.style.display = 'none'; }
+            });
+        }
+
+        function ShowMercury(){ 
+            document.getElementById('mercury').style.display = 'block';
+            document.getElementById('mercuryinfo').style.display = 'block';
+        }
+        function ShowVenus(){ 
+            document.getElementById('venus').style.display = 'block';
+            document.getElementById('venusinfo').style.display = 'block';
+        }
+        function ShowEarth(){ 
+            document.getElementById('earth').style.display = 'block';
+            document.getElementById('earthinfo').style.display = 'block';
+        }
+        function ShowMars(){ 
+            document.getElementById('mars').style.display = 'block';
+            document.getElementById('marsinfo').style.display = 'block';
+        }
+        function ShowJupiter(){ 
+            document.getElementById('jupiter').style.display = 'block';
+            document.getElementById('jupiterinfo').style.display = 'block';
+        }
+        function ShowSaturn(){ 
+            document.getElementById('saturn').style.display = 'block';
+            document.getElementById('saturninfo').style.display = 'block';
+        }
+        function ShowUranus(){ 
+            document.getElementById('uranus').style.display = 'block';
+            document.getElementById('uranusinfo').style.display = 'block';
+        }
+        function ShowNeptune(){ 
+            document.getElementById('neptune').style.display = 'block';
+            document.getElementById('neptuneinfo').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+<div id="slideshow-container">
+    <div id="bigimages">
+        <!-- Planet Images -->
+        <img src="https://peopel-su.github.io/ist263/images/mecury.jpg" alt="mercury" id="mercury">
+        <img src="https://peopel-su.github.io/ist263/images/venus.jpg" alt="venus" id="venus">
+        <img src="https://peopel-su.github.io/ist263/images/earth.jpg" alt="earth" id="earth">
+        <img src="https://peopel-su.github.io/ist263/images/mars.jpg" alt="mars" id="mars">
+        <img src="https://peopel-su.github.io/ist263/images/jupiter.jpg" alt="jupiter" id="jupiter">
+        <img src="https://peopel-su.github.io/ist263/images/saturn.jpg" alt="saturn" id="saturn">
+        <img src="https://peopel-su.github.io/ist263/images/uranus.jpg" alt="uranus" id="uranus">
+        <img src="https://peopel-su.github.io/ist263/images/neptune.jpg" alt="neptune" id="neptune">
+    </div>
+    <div id="planetinfo">        
+        <h1>Planets Slideshow</h1>
+        <div id="mercuryinfo">
+            <h2>Mercury</h2>
+            <p>Mercury is the smallest and innermost planet in the Solar System...</p>
+        </div>
+        <div id="venusinfo">
+            <h2>Venus</h2>
+            <p>Venus is the second planet from the Sun...</p>
+        </div>
+        <div id="earthinfo">
+            <h2>Earth</h2>
+            <p>Earth is the third planet from the Sun...</p>
+        </div>
+        <div id="marsinfo">
+            <h2>Mars</h2>
+            <p>Mars is a terrestrial planet with a thin atmosphere...</p>
+        </div>
+        <div id="jupiterinfo">
+            <h2>Jupiter</h2>
+            <p>Jupiter is the fifth planet from the Sun...</p>
+        </div>
+        <div id="saturninfo">
+            <h2>Saturn</h2>
+            <p>Saturn is the sixth planet from the Sun...</p>
+        </div>
+        <div id="uranusinfo">
+            <h2>Uranus</h2>
+            <p>Uranus is the seventh planet from the Sun...</p>
+        </div>
+        <div id="neptuneinfo">
+            <h2>Neptune</h2>
+            <p>Neptune is the eighth planet from the Sun...</p>
+        </div>
+    </div>
+    <div id="thumbnails">
+        <!-- Thumbnails with JS events -->
+        <img src="https://peopel-su.github.io/ist263/images/mecury.jpg" alt="mercury" id="mercurythumb" onclick="PlanetsOff(); ShowMercury();">
+        <img src="https://peopel-su.github.io/ist263/images/venus.jpg" alt="venus" id="venusthumb" onclick="PlanetsOff(); ShowVenus();">
+        <img src="https://peopel-su.github.io/ist263/images/earth.jpg" alt="earth" id="earththumb" onclick="PlanetsOff(); ShowEarth();">
+        <img src="https://peopel-su.github.io/ist263/images/mars.jpg" alt="mars" id="marsthumb" onclick="PlanetsOff(); ShowMars();">
+        <img src="https://peopel-su.github.io/ist263/images/jupiter.jpg" alt="jupiter" id="jupiterthumb" onclick="PlanetsOff(); ShowJupiter();">
+        <img src="https://peopel-su.github.io/ist263/images/saturn.jpg" alt="saturn" id="saturnthumb" onclick="PlanetsOff(); ShowSaturn();">
+        <img src="https://peopel-su.github.io/ist263/images/uranus.jpg" alt="uranus" id="uranusthumb" onclick="PlanetsOff(); ShowUranus();">
+        <img src="https://peopel-su.github.io/ist263/images/neptune.jpg" alt="neptune" id="neptunethumb" onclick="PlanetsOff(); ShowNeptune();">
+    </div>
+</div>
+</body>
+</html>
