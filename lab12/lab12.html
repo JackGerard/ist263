@@ -12,29 +12,29 @@
         #slideshow-container {
             background-color: #000000;
             width: 1200px;
-            margin: auto; /* margin auto is centering this container */        
+            margin: auto;        
         }
         #bigimages { margin-right: 100px; }
         #planetinfo { padding: 100px; }
 
         #thumbnails { width: 840px; margin: auto; padding-top: 20px; } 
-        /* ^^ margin auto is centering this container */
+        
         #mercurythumb, #venusthumb, #earththumb, #marsthumb, #jupiterthumb, #saturnthumb, #uranusthumb, #neptunethumb { width: 100px; }
 
-        /* Hide all other planets & info on load (keep Mercury visible) */
+      
         #venus, #earth, #mars, #jupiter, #saturn, #uranus, #neptune,
         #venusinfo, #earthinfo, #marsinfo, #jupiterinfo, #saturninfo, #uranusinfo, #neptuneinfo {
             display: none;
         }
 
-        /* Layout using only float/clear for the parent containers */
+       
         #bigimages { float: left; }
-        #planetinfo { float: left; }  /* float the parent, not mercuryinfo */
-        #thumbnails { clear: both; }  /* push thumbnails below the two columns */
+        #planetinfo { float: left; }  
+        #thumbnails { clear: both; }  
     </style>
 
     <script>
-    /* Turn everything off (images + text) */
+  
     function PlanetsOff() {
         const ids = [
             'mercury','venus','earth','mars','jupiter','saturn','uranus','neptune',
@@ -46,7 +46,7 @@
         });
     }
 
-    /* Show helpers: turn on image + text for the selected planet */
+   
     function ShowMercury() {
         document.getElementById('mercury').style.display = 'block';
         document.getElementById('mercuryinfo').style.display = 'block';
@@ -131,7 +131,7 @@
     </div>
 
     <div id="thumbnails">
-        <!-- Each thumbnail runs: hide all, then show the chosen planet -->
+        
         <img src="https://peopel-su.github.io/ist263/images/mecury.jpg" alt="mercury" id="mercurythumb" onclick="PlanetsOff(); ShowMercury();">
         <img src="https://peopel-su.github.io/ist263/images/venus.jpg" alt="venus" id="venusthumb" onclick="PlanetsOff(); ShowVenus();">
         <img src="https://peopel-su.github.io/ist263/images/earth.jpg" alt="earth" id="earththumb" onclick="PlanetsOff(); ShowEarth();">
