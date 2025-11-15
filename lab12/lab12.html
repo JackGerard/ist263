@@ -17,33 +17,34 @@
         #bigimages { margin-right: 100px; }
         #planetinfo { padding: 100px; }
 
-
+        /* Thumbnail container */
         #thumbnails { width: 840px; margin: auto; padding-top: 20px; }
 
-
+        /* Thumbnail sizes */
         #mercurythumb, #venusthumb, #earththumb, #marsthumb,
         #jupiterthumb, #saturnthumb, #uranusthumb, #neptunethumb {
             width: 100px;
         }
 
-      
+        /* Hide all planets except Mercury */
         #venus, #earth, #mars, #jupiter, #saturn, #uranus, #neptune,
         #venusinfo, #earthinfo, #marsinfo, #jupiterinfo,
         #saturninfo, #uranusinfo, #neptuneinfo {
             display: none;
         }
 
-       
+        /* Layout using floats */
         #bigimages { float: left; }
         #planetinfo { float: left; }
         #thumbnails { clear: both; }
-
     </style>
 
 <script>
-
-
+/* ===============================
+   TURN EVERYTHING OFF
+   =============================== */
 function PlanetsOff() {
+    // turn off all big planet images
     document.getElementById('mercury').style.display = 'none';
     document.getElementById('venus').style.display = 'none';
     document.getElementById('earth').style.display = 'none';
@@ -53,9 +54,102 @@ function PlanetsOff() {
     document.getElementById('uranus').style.display = 'none';
     document.getElementById('neptune').style.display = 'none';
 
+    // turn off all text
     document.getElementById('mercuryinfo').style.display = 'none';
     document.getElementById('venusinfo').style.display = 'none';
     document.getElementById('earthinfo').style.display = 'none';
     document.getElementById('marsinfo').style.display = 'none';
     document.getElementById('jupiterinfo').style.display = 'none';
-    document.getElementById('saturninfo').style.displa
+    document.getElementById('saturninfo').style.display = 'none';
+    document.getElementById('uranusinfo').style.display = 'none';
+    document.getElementById('neptuneinfo').style.display = 'none';
+}
+
+/* ===============================
+   SHOW INDIVIDUAL PLANETS
+   =============================== */
+function ShowMercury() {
+    document.getElementById('mercury').style.display = 'block';
+    document.getElementById('mercuryinfo').style.display = 'block';
+}
+
+function ShowVenus() {
+    document.getElementById('venus').style.display = 'block';
+    document.getElementById('venusinfo').style.display = 'block';
+}
+
+function ShowEarth() {
+    document.getElementById('earth').style.display = 'block';
+    document.getElementById('earthinfo').style.display = 'block';
+}
+
+function ShowMars() {
+    document.getElementById('mars').style.display = 'block';
+    document.getElementById('marsinfo').style.display = 'block';
+}
+
+function ShowJupiter() {
+    document.getElementById('jupiter').style.display = 'block';
+    document.getElementById('jupiterinfo').style.display = 'block';
+}
+
+function ShowSaturn() {
+    document.getElementById('saturn').style.display = 'block';
+    document.getElementById('saturninfo').style.display = 'block';
+}
+
+function ShowUranus() {
+    document.getElementById('uranus').style.display = 'block';
+    document.getElementById('uranusinfo').style.display = 'block';
+}
+
+function ShowNeptune() {
+    document.getElementById('neptune').style.display = 'block';
+    document.getElementById('neptuneinfo').style.display = 'block';
+}
+</script>
+</head>
+<body>
+
+<div id="slideshow-container">
+
+    <div id="bigimages">
+        <img src="https://peopel-su.github.io/ist263/images/mecury.jpg" id="mercury">
+        <img src="https://peopel-su.github.io/ist263/images/venus.jpg" id="venus">
+        <img src="https://peopel-su.github.io/ist263/images/earth.jpg" id="earth">
+        <img src="https://peopel-su.github.io/ist263/images/mars.jpg" id="mars">
+        <img src="https://peopel-su.github.io/ist263/images/jupiter.jpg" id="jupiter">
+        <img src="https://peopel-su.github.io/ist263/images/saturn.jpg" id="saturn">
+        <img src="https://peopel-su.github.io/ist263/images/uranus.jpg" id="uranus">
+        <img src="https://peopel-su.github.io/ist263/images/neptune.jpg" id="neptune">
+    </div>
+
+    <div id="planetinfo">
+        <h1>Planets Slideshow</h1>
+
+        <div id="mercuryinfo"><h2>Mercury</h2><p>Mercury is the smallest and innermost planet...</p></div>
+        <div id="venusinfo"><h2>Venus</h2><p>Venus is the second planet...</p></div>
+        <div id="earthinfo"><h2>Earth</h2><p>Earth is the third planet...</p></div>
+        <div id="marsinfo"><h2>Mars</h2><p>Mars is the fourth planet...</p></div>
+        <div id="jupiterinfo"><h2>Jupiter</h2><p>Jupiter is the fifth planet...</p></div>
+        <div id="saturninfo"><h2>Saturn</h2><p>Saturn is the sixth planet...</p></div>
+        <div id="uranusinfo"><h2>Uranus</h2><p>Uranus is the seventh planet...</p></div>
+        <div id="neptuneinfo"><h2>Neptune</h2><p>Neptune is the eighth planet...</p></div>
+    </div>
+
+    <!-- Thumbnails controlling slideshow -->
+    <div id="thumbnails">
+        <img src="https://peopel-su.github.io/ist263/images/mecury.jpg" id="mercurythumb" onclick="PlanetsOff(); ShowMercury();">
+        <img src="https://peopel-su.github.io/ist263/images/venus.jpg" id="venusthumb" onclick="PlanetsOff(); ShowVenus();">
+        <img src="https://peopel-su.github.io/ist263/images/earth.jpg" id="earththumb" onclick="PlanetsOff(); ShowEarth();">
+        <img src="https://peopel-su.github.io/ist263/images/mars.jpg" id="marsthumb" onclick="PlanetsOff(); ShowMars();">
+        <img src="https://peopel-su.github.io/ist263/images/jupiter.jpg" id="jupiterthumb" onclick="PlanetsOff(); ShowJupiter();">
+        <img src="https://peopel-su.github.io/ist263/images/saturn.jpg" id="saturnthumb" onclick="PlanetsOff(); ShowSaturn();">
+        <img src="https://peopel-su.github.io/ist263/images/uranus.jpg" id="uranusthumb" onclick="PlanetsOff(); ShowUranus();">
+        <img src="https://peopel-su.github.io/ist263/images/neptune.jpg" id="neptunethumb" onclick="PlanetsOff(); ShowNeptune();">
+    </div>
+
+</div>
+
+</body>
+</html>
