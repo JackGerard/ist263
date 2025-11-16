@@ -17,34 +17,31 @@
         #bigimages { margin-right: 100px; }
         #planetinfo { padding: 100px; }
 
-        /* Thumbnail container */
+
         #thumbnails { width: 840px; margin: auto; padding-top: 20px; }
 
-        /* Thumbnail sizes */
+
         #mercurythumb, #venusthumb, #earththumb, #marsthumb,
         #jupiterthumb, #saturnthumb, #uranusthumb, #neptunethumb {
             width: 100px;
         }
 
-        /* Hide all planets except Mercury */
+      
         #venus, #earth, #mars, #jupiter, #saturn, #uranus, #neptune,
         #venusinfo, #earthinfo, #marsinfo, #jupiterinfo,
         #saturninfo, #uranusinfo, #neptuneinfo {
             display: none;
         }
 
-        /* Layout using floats */
         #bigimages { float: left; }
         #planetinfo { float: left; }
         #thumbnails { clear: both; }
     </style>
 
 <script>
-/* ===============================
-   TURN EVERYTHING OFF
-   =============================== */
+
 function PlanetsOff() {
-    // turn off all big planet images
+
     document.getElementById('mercury').style.display = 'none';
     document.getElementById('venus').style.display = 'none';
     document.getElementById('earth').style.display = 'none';
@@ -54,7 +51,7 @@ function PlanetsOff() {
     document.getElementById('uranus').style.display = 'none';
     document.getElementById('neptune').style.display = 'none';
 
-    // turn off all text
+
     document.getElementById('mercuryinfo').style.display = 'none';
     document.getElementById('venusinfo').style.display = 'none';
     document.getElementById('earthinfo').style.display = 'none';
@@ -65,9 +62,6 @@ function PlanetsOff() {
     document.getElementById('neptuneinfo').style.display = 'none';
 }
 
-/* ===============================
-   SHOW INDIVIDUAL PLANETS
-   =============================== */
 function ShowMercury() {
     document.getElementById('mercury').style.display = 'block';
     document.getElementById('mercuryinfo').style.display = 'block';
@@ -137,7 +131,7 @@ function ShowNeptune() {
         <div id="neptuneinfo"><h2>Neptune</h2><p>Neptune is the eighth planet...</p></div>
     </div>
 
-    <!-- Thumbnails controlling slideshow -->
+
     <div id="thumbnails">
         <img src="https://peopel-su.github.io/ist263/images/mecury.jpg" id="mercurythumb" onclick="PlanetsOff(); ShowMercury();">
         <img src="https://peopel-su.github.io/ist263/images/venus.jpg" id="venusthumb" onclick="PlanetsOff(); ShowVenus();">
