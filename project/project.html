@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Skiing & Snowboarding - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b1520;
+            color: white;
+            margin: 0;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            background: #12263a;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main layout */
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .main {
+            flex: 2;
+        }
+
+        .side {
+            flex: 1;
+            background: #1b3b5a;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        img {
+            width: 100%;        /* responsive */
+            border-radius: 8px;
+        }
+
+        @media (max-width: 700px) {
+            nav ul { flex-direction: column; }
+            .container { flex-direction: column; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#story">My Story</a></li>
+            <li><a href="#why">Why Try It</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" id="home">
+        <div class="main">
+            <h1>Home Page</h1>
+            <p>
+                Few things in life compare to the exhilarating feeling of carving down a mountain piercing through the wind
+                floating on powder. No matter how good the snow is, skiing and snowboarding as a whole are so much more than
+                just sports — they are about adventure, rush, community, and pure fun.
+            </p>
+
+            <h2 id="story">My Story</h2>
+
+            <p>
+                I first started skiing when I was around 5 years old at Jiminy Peak. I would go with all my aunt, uncles and cousins.
+                Some of my favorite childhood memories were made there. The excitement of those first few trips sparked the passion
+                that still drives me today.
+            </p>
+
+            <p>
+                As I grew older I started snowboarding to add a new aspect of the adventure. Finding a new rhythm and experiencing
+                the mountain in a way I never had before. Now I tend to switch between depending on the conditions.
+            </p>
+
+            <h2 id="why">Why should you try it</h2>
+
+            <p>Adventure and freedom — every run is a path through beautiful scenery.</p>
+            <p>Health and fitness — keeps you in shape and is a fun way to build endurance.</p>
+            <p>Community — the mountain brings people together, you’ll have some of the best conversations on the chairlift with strangers.</p>
+        </div>
+
+        <aside class="side">
+            <h3>My Skiing Photo</h3>
+            <img src="ski1.jpg" alt="Me skiing">
+        </aside>
+    </div>
+
+</body>
+</html>
