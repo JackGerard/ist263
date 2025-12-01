@@ -1,24 +1,364 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset= "utf-8">
-        <title> Title here </title>
-        <style>
-            .flexy{display: flex;}
-            .boomba, .wasabi{flex:2 ;}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IST 263 Exam 3 Code Cheat Sheet</title>
 
-        </style>
-    </head>
-    <div class="flexy">
-        <div class="boomba">
+    <!-- 1. VIEWPORT META TAG (RESPONSIVE) -->
+    <!-- Makes the layout scale properly on phones instead of zoomed out -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <p class="paragraph">iuegsfouygESDFCOUYAUYOSCOUYASCUYOASWUCUQW</p>
+    <style>
+        /*************** UNIT 09 – ADVANCED LAYOUT ***************/
 
+        /* 2. Center inline content (text) */
+        .inline-center {
+            text-align: center; /* Centers inline content like text inside this block */
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 3. Center a block element (like a div) */
+        .block-center {
+            width: 300px;       /* Needs a width */
+            margin: 0 auto;     /* Centers the block left/right */
+            background-color: #d0ebff;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 4. Basic flexbox centering */
+        .flex-center-container {
+            display: flex;               /* Makes this a flex container */
+            justify-content: center;     /* Centers children horizontally */
+            background-color: #ffe6e6;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .flex-center-item {
+            background-color: #ffadad;
+            padding: 10px 20px;
+        }
+
+        /* 5. Navigation bar using flexbox */
+        .nav-bar {
+            display: flex;                  /* Flex container for nav */
+            justify-content: space-between; /* Space between logo and links */
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+        }
+        .nav-logo {
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;       /* Inner flexbox for nav items */
+            gap: 15px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* 6. justify-content examples (main axis alignment) */
+        .justify-demo {
+            display: flex;
+            background-color: #f7f7f7;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+        }
+        .jc-box {
+            width: 40px;
+            height: 40px;
+            background-color: #add8e6;
+            margin: 5px;
+        }
+        .jc-start   { justify-content: flex-start; }   /* items to the left */
+        .jc-center  { justify-content: center; }       /* items centered */
+        .jc-end     { justify-content: flex-end; }     /* items to the right */
+        .jc-between { justify-content: space-between; }/* space between items */
+        .jc-around  { justify-content: space-around; } /* space around items */
+
+        /* 7. Nested flexboxes: header has flex; nav inside also flex */
+        .header {
+            display: flex;                  /* OUTER flexbox */
+            justify-content: space-between; /* Logo left, nav right */
+            align-items: center;
+            padding: 15px;
+            background-color: #ececec;
+            margin-bottom: 20px;
+        }
+        .header-logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .header-nav {
+            display: flex;     /* INNER flexbox */
+            gap: 15px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*************** LESSON 10 – RESPONSIVE DESIGN ***************/
+
+        /* 8. max-width to keep content from getting too wide */
+        .max-width-box {
+            max-width: 600px;   /* element will not grow wider than 600px */
+            width: 90%;         /* but can shrink on smaller screens */
+            margin: 0 auto;
+            background-color: #caffbf;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 9. flex-wrap: wrap; to let flex items move to next line */
+        .wrap-container {
+            display: flex;
+            flex-wrap: wrap;    /* When items don't fit, wrap to next row */
+            gap: 10px;
+            background-color: #f0f0ff;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .wrap-item {
+            background-color: #bdb2ff;
+            padding: 10px;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        /* 10. display: block for inline elements (like <a>, <span>) */
+        .inline-block-example a {
+            display: block;      /* Makes the link behave like a block */
+            margin-bottom: 10px; /* Can give margin top/bottom now */
+            background-color: #ffd6a5;
+            padding: 8px;
+        }
+
+        /* 11. Media query example: change background on small screens */
+        @media (max-width: 800px) {
+            body {
+                background-color: #f1f1f1; /* Only when screen width <= 800px */
+            }
+        }
+
+        /*************** LESSON 11 & 12 – JAVASCRIPT ***************/
+
+        /* For JS DOM / display examples */
+        #toggleBox {
+            width: 200px;
+            height: 100px;
+            background-color: #9bf6ff;
+            display: block;   /* shown by default */
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 100px;
+        }
+        #colorBox {
+            width: 200px;
+            height: 100px;
+            background-color: #ffd6e0;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 10px;
+        }
+    </style>
+
+    <!-- EXTERNAL JS EXAMPLE:
+         In a real project you'd use:
+         <script src="script.js"></script>
+         For this cheat sheet we'll just use embedded JS below. -->
+</head>
+<body>
+
+    <h1>IST 263 Exam 3 – Code Cheat Sheet</h1>
+
+    <!------------ UNIT 09 – ADVANCED LAYOUT ------------>
+
+    <h2>1. Center Inline Content (text-align: center;)</h2>
+    <p class="inline-center">
+        This text is centered using <code>text-align: center;</code> on the parent.
+    </p>
+
+    <h2>2. Center a Block Element (margin: 0 auto;)</h2>
+    <div class="block-center">
+        This div is centered with <code>margin: 0 auto;</code> and a set width.
     </div>
 
-    <div class="wasabi">
-
-     <p>wrhgfbqewrdf</p>
-
+    <h2>3. Center Using Flexbox (display: flex; justify-content: center;)</h2>
+    <div class="flex-center-container">
+        <div class="flex-center-item">
+            I am centered with flexbox.
+        </div>
     </div>
+
+    <h2>4. Navigation Bar with Flexbox</h2>
+    <div class="nav-bar">
+        <div class="nav-logo">MyLogo</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Mountains</a></li>
+            <li><a href="#">Films</a></li>
+        </ul>
     </div>
+
+    <h2>5. justify-content Examples</h2>
+
+    <p>flex-start:</p>
+    <div class="justify-demo jc-start">
+        <div class="jc-box"></div><div class="jc-box"></div><div class="jc-box"></div>
+    </div>
+
+    <p>center:</p>
+    <div class="justify-demo jc-center">
+        <div class="jc-box"></div><div class="jc-box"></div><div class="jc-box"></div>
+    </div>
+
+    <p>flex-end:</p>
+    <div class="justify-demo jc-end">
+        <div class="jc-box"></div><div class="jc-box"></div><div class="jc-box"></div>
+    </div>
+
+    <p>space-between:</p>
+    <div class="justify-demo jc-between">
+        <div class="jc-box"></div><div class="jc-box"></div><div class="jc-box"></div>
+    </div>
+
+    <p>space-around:</p>
+    <div class="justify-demo jc-around">
+        <div class="jc-box"></div><div class="jc-box"></div><div class="jc-box"></div>
+    </div>
+
+    <h2>6. Nested Flexboxes</h2>
+    <div class="header">
+        <div class="header-logo">Ski Start</div>
+        <ul class="header-nav">
+            <li>Home</li>
+            <li>Mountains</li>
+            <li>Films</li>
+            <li>Lessons</li>
+        </ul>
+    </div>
+
+    <!------------ LESSON 10 – RESPONSIVE DESIGN ------------>
+
+    <h2>7. max-width Example</h2>
+    <div class="max-width-box">
+        This box uses <code>max-width</code> so it won't get too wide on big screens,
+        but it can shrink on small screens.
+    </div>
+
+    <h2>8. flex-wrap: wrap;</h2>
+    <div class="wrap-container">
+        <div class="wrap-item">Item 1</div>
+        <div class="wrap-item">Item 2</div>
+        <div class="wrap-item">Item 3</div>
+        <div class="wrap-item">Item 4</div>
+        <div class="wrap-item">Item 5</div>
+    </div>
+
+    <h2>9. display: block on Inline Elements</h2>
+    <div class="inline-block-example">
+        <a href="#">This link is now a block element.</a>
+        <a href="#">It takes full width and breaks to a new line.</a>
+    </div>
+
+    <h2>10. Media Query Example (max-width: 800px)</h2>
+    <p>
+        Resize the browser window under 800px wide – the body background changes
+        because of the media query in the CSS.
+    </p>
+
+    <!------------ LESSON 11 – INTRO TO JAVASCRIPT ------------>
+
+    <h2>11. Embedded & External JavaScript Syntax</h2>
+
+    <p>Embedded JavaScript:</p>
+    <pre><code>&lt;script&gt;
+    alert("Hello from embedded JavaScript!");
+&lt;/script&gt;
+</code></pre>
+
+    <p>External JavaScript (in real project):</p>
+    <pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;
+</code></pre>
+
+    <h2>12. Basic alert() Example</h2>
+    <button onclick="alert('Button clicked!')">Click for alert()</button>
+
+    <h2>13. JavaScript Function + onclick Event</h2>
+    <button onclick="sayHi()">Run sayHi() Function</button>
+
+    <h2>14. onmouseover Event</h2>
+    <p onmouseover="hoverMessage()">Hover over this text to run a function.</p>
+
+    <!------------ LESSON 12 – MORE JAVASCRIPT: DOM, DISPLAY, LOCATORS ------------>
+
+    <h2>15. DOM, Nodes, Locators, and display: none/block</h2>
+
+    <div id="toggleBox">I can be shown or hidden.</div>
+    <button onclick="hideBox()">Hide Box</button>
+    <button onclick="showBox()">Show Box</button>
+
+    <h3>Change Style and Text using getElementById</h3>
+    <div id="colorBox">Change my color and text</div>
+    <button onclick="makeRed()">Make Red</button>
+    <button onclick="makeBlue()">Make Blue</button>
+
+    <h3>Locator Examples (getElementById, querySelector)</h3>
+    <p id="textNodeExample">Original text</p>
+    <button onclick="changeText()">Change Text with Locator</button>
+
+    <!-- JAVASCRIPT SECTION -->
+    <script>
+        /*************** BASIC FUNCTION EXAMPLE ***************/
+        function sayHi() {
+            alert("Hi from a JavaScript function!");
+        }
+
+        function hoverMessage() {
+            console.log("You hovered over the text!");
+        }
+
+        /*************** SHOW/HIDE WITH display: NONE/BLOCK ***************/
+        function hideBox() {
+            // Locator: getElementById
+            document.getElementById("toggleBox").style.display = "none";
+        }
+
+        function showBox() {
+            document.getElementById("toggleBox").style.display = "block";
+        }
+
+        /*************** CHANGE STYLE AND TEXT ***************/
+        function makeRed() {
+            var box = document.getElementById("colorBox");
+            box.style.backgroundColor = "red";     // change CSS style
+            box.innerHTML = "I am red now";        // change text node
+        }
+
+        function makeBlue() {
+            var box = document.getElementById("colorBox");
+            box.style.backgroundColor = "blue";
+            box.innerHTML = "I am blue now";
+        }
+
+        /*************** LOCATOR & TEXT CHANGE ***************/
+        function changeText() {
+            // Using getElementById (locator)
+            var p = document.getElementById("textNodeExample");
+            p.innerHTML = "The text has been changed using JavaScript!";
+        }
+    </script>
+
+</body>
+</html>
