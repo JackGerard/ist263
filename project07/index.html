@@ -8,6 +8,7 @@
 </head>
 
 <body>
+
 <a class="skip-link" href="#content">Skip to content</a>
 
 <header>
@@ -17,25 +18,27 @@
       <span>by Jack Gerard</span>
     </div>
 
-   <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="mountains.html">Mountains</a></li>
-    <li><a href="videos.html">Videos</a></li>
-  </ul>
-</nav>
-
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mountains.html">Mountains</a></li>
+        <li><a href="videos.html">Videos</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
 <main id="content">
-  <section class="hero" aria-label="Hero">
+
+  <section class="hero">
     <h1>Skiing &amp; Snowboarding</h1>
     <p>
       Few things compare to carving down a mountain—wind in your face, floating on powder.
       These sports are about adventure, community, and pure fun.
     </p>
-    <div class="badges" aria-label="Highlights">
+
+    <!-- aria-label REMOVED (validator fix) -->
+    <div class="badges">
       <span class="badge">Adventure</span>
       <span class="badge">Fitness</span>
       <span class="badge">Community</span>
@@ -43,8 +46,11 @@
   </section>
 
   <section class="grid">
+    <!-- Required heading added (validator fix) -->
+    <h2 class="visually-hidden">Main content</h2>
+
     <article class="panel">
-      <h2>My Story</h2>
+      <h3>My Story</h3>
       <p>
         I first started skiing when I was around 5 years old at Jiminy Peak. I would go with my aunts,
         uncles, and cousins—some of my favorite childhood memories were made there.
@@ -54,7 +60,7 @@
         skiing and snowboarding depending on conditions.
       </p>
 
-      <h2>Why you should try it</h2>
+      <h3>Why you should try it</h3>
       <ul>
         <li><strong>Adventure &amp; freedom:</strong> every run is a path through beautiful scenery.</li>
         <li><strong>Health &amp; fitness:</strong> a fun way to build endurance and stay active.</li>
@@ -62,18 +68,23 @@
       </ul>
     </article>
 
-    <aside class="panel" aria-label="Photo">
-      <h2>On the mountain</h2>
+    <aside class="panel">
+      <h3>On the mountain</h3>
       <figure>
-        <img src="images/ski1.jpg" alt="me and my family on the ski mountain">
-        <figcaption>This is me and my family at Heavenly Mountain in Lake Tahoe</figcaption>
+        <img src="images/ski1.jpg" alt="Jack and his family skiing together on a snowy mountain">
+        <figcaption>
+          Skiing with my family — some of my favorite memories on the mountain.
+        </figcaption>
       </figure>
     </aside>
+
   </section>
+
 </main>
 
 <footer>
   <p>&copy; 2025 Jack Gerard. Built for IST 263.</p>
 </footer>
+
 </body>
 </html>
